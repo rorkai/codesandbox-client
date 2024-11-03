@@ -21,9 +21,7 @@ export function createExternalCSSLink(resource: string): HTMLLinkElement {
 
   link.id = 'external-css';
   link.rel = 'stylesheet';
-  link.type = resource.includes('tailwind.css')
-    ? 'text/tailwindcss'
-    : 'text/css';
+  link.type = resource.includes('tailwind') ? 'text/tailwindcss' : 'text/css';
   link.href = resource;
   link.media = 'all';
 
