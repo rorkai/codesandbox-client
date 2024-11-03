@@ -58,6 +58,12 @@ function addJS(resource: string) {
 }
 
 export function resourceIsCss(resource: string): boolean {
+  if (resource.startsWith('data:')) {
+    return (
+      resource.includes('text/css') || resource.includes('text/tailwindcss')
+    );
+  }
+
   const match = resource.match(/\.([^.]*)$/);
 
   return (match && match[1] === 'css') || resource.includes('fonts.googleapis');
