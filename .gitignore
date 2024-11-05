@@ -34,3 +34,4 @@ standalone-packages/monaco-editor-core
 
 packages/app/static/js/env-config.js
 .vercel
+.env*.local
